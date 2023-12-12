@@ -1,3 +1,4 @@
+# app.py
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -25,11 +26,9 @@ elif chart_choice == "Gráfico de Dispersão":
     st.write('Criando um gráfico de dispersão para as colunas "odometer" e "price"')
     
     # Criar um gráfico de dispersão mais elaborado com cores e tamanhos diferentes
-    fig_scatter = px.scatter(car_data, x="odometer", y="price", color="manufacturer", size="model_year",
+    fig_scatter = px.scatter(car_data, x="odometer", y="price", color="fuel", size="model_year",
                              title="Relação entre Quilometragem e Preço",
                              labels={"odometer": "Quilometragem", "price": "Preço"})
     
     # Exibir o gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
-
-
