@@ -25,12 +25,12 @@ if chart_choice == "Histograma":
 elif chart_choice == "Gráfico de Dispersão":
     st.write('Criando um gráfico de dispersão para as colunas "odometer" e "price"')
     
-    # Criar um gráfico de dispersão mais elaborado com cores e tamanhos diferentes
-    fig_scatter = px.scatter(car_data, x="odometer", y="price", color="fuel",
-                             title="Relação entre Quilometragem e Preço",
+    # Criar um gráfico de dispersão mais básico
+    fig_scatter = px.scatter(car_data, x="odometer", y="price", title="Relação entre Quilometragem e Preço",
                              labels={"odometer": "Quilometragem", "price": "Preço"})
     
     # Exibir o gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
+
 
 
