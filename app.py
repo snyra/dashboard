@@ -32,3 +32,4 @@ elif chart_choice == "Gráfico de Dispersão":
     
     # Exibir o gráfico Plotly interativo
     st.plotly_chart(fig_scatter, use_container_width=True)
+
